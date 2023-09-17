@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  color: string = 'green';
+  color: string = 'red';
   #formBuilder = inject(FormBuilder);
   productForm = this.#formBuilder.group({
     name: [
