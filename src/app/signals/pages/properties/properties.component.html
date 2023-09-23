@@ -1,1 +1,35 @@
-<p>properties works!</p>
+<h1>Mutaciones</h1>
+<hr>
+
+<div class='row'>
+  <div class='col-6'>
+    <input
+      #txtEmail
+      (input)="onFieldUpdated('email', txtEmail.value)"
+      [value]='user().email'
+      class='form-control'
+      type='text'
+    >
+
+    <input
+      #txtFirstName
+      (input)="onFieldUpdated('first_name', txtFirstName.value)"
+      [value]='user().first_name'
+      class='form-control mt-3'
+      type='text'
+    >
+
+    <input
+      #txtLastName
+      (input)="onFieldUpdated('last_name', txtLastName.value)"
+      [value]='user().last_name'
+      class='form-control mt-3'
+      type='text'
+    >
+  </div>
+
+  <div class='col-6'>
+    <pre>{{user()|json}}</pre>
+    <pre class='mt-2'>{{userFullName()}}</pre>
+  </div>
+</div>
